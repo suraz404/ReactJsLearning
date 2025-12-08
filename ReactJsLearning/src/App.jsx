@@ -1,12 +1,12 @@
+import { ToggleSwitch } from "./ToggleSwitch Project/ToggleSwitch"
 
-import './App.css'
 
 function App() {
   
 
   return (
     <>
-      
+      <ToggleSwitch/>
     </>
   )
 }
