@@ -1,4 +1,4 @@
-import { ToggleSwitch } from "./ToggleSwitch Project/ToggleSwitch"
+import { Todo } from "./TodoList/Todo"  
 
 
 function App() {
@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <ToggleSwitch/>
+      <Todo/>
     </>
   )
 }
