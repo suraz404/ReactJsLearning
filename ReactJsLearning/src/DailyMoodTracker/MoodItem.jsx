@@ -1,5 +1,5 @@
 
-export const MoodItem=({ text })=> {
+export const MoodItem=(props)=> {
   return (
     <div
       style={{
@@ -12,7 +12,7 @@ export const MoodItem=({ text })=> {
         alignItems: "center",        
       }}
     >
-      <span>{text}</span>
+      <span>{props.text}</span>
       <button>Delete</button>
     </div> 
   );
