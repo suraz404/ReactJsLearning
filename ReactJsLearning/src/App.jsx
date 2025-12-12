@@ -27,12 +27,17 @@ const [moods, setMoods] = useState(() => {
     // add to the front immutably
     setMoods((prev) => [newMood, ...prev]);
   };
+
+  const deleteMood =(id)=>{
+   setMoods((prev) => prev.filter((mood) => mood.id !== id));
+  }
+
   return (
     <div style={{ padding: "20px", maxWidth: "500px", margin: "0 auto" }}>
       <h1>Daily Mood Tracker</h1>
-      <MoodInput onAddMood={addMood} />
-      <MoodList moods={moods} />
-      <p>Total moods: 0</p> {/* Placeholder for later */}
+      <MoodInput onAddMood={addMood}  />
+      <MoodList moods={moods} onDelete={deleteMood} />
+      <p>Total moods: {moods.length}</p> {/* Placeholder for later */}
     </div>
   );
 }

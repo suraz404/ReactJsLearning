@@ -1,5 +1,5 @@
 
-export const MoodItem=(props)=> {
+export const MoodItem=({id,onDelete,text})=> {
   return (
     <div
       style={{
@@ -12,8 +12,8 @@ export const MoodItem=(props)=> {
         alignItems: "center",        
       }}
     >
-      <span>{props.text}</span>
-      <button>Delete</button>
+      <span>{text}</span>
+      <button onClick={() => onDelete(id)}>Delete</button>
     </div> 
   );
 }
