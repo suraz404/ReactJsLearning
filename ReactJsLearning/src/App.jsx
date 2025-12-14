@@ -1,45 +1,49 @@
-// // import { Todo } from "./TodoList/Todo"  
+// import { Todo } from "./TodoList/Todo"  
 
-import { MoodInput } from "./DailyMoodTracker/MoodInput"
+// import { MoodInput } from "./DailyMoodTracker/MoodInput"
 // import { MoodItem } from "./DailyMoodTracker/MoodItem"
-  import  MoodList  from "./DailyMoodTracker/MoodList"
-import { useState } from "react";
+//   import  MoodList  from "./DailyMoodTracker/MoodList"
+// import { useState } from "react";
+ 
 
-function App() {
 
-const [moods, setMoods] = useState(() => {
-  const now = Date.now();
-  return [
-    { id: now,text: "Happy this morning", createdAt: now },
-    { id: now + 1,text: "Feeling tired", createdAt: now },
-  ];
-});
-  const addMood = (text) => {
-    const trimmed = String(text).trim();
-    if (!trimmed) return; // avoid empty moods
+// function App() {
 
-    const newMood = {
-      id: Date.now(),      // unique id
-      text: trimmed,
-      createdAt: Date.now(),
-    };
+// const [moods, setMoods] = useState(() => {
+//   const now = Date.now();
+//   return [
+//     { id: now,text: "Happy this morning", createdAt: now },
+//     { id: now + 1,text: "Feeling tired", createdAt: now },
+//   ];
+// });
+//   const addMood = (text) => {
+//     const trimmed = String(text).trim();
+//     if (!trimmed) return; // avoid empty moods
 
-    // add to the front immutably
-    setMoods((prev) => [newMood, ...prev]);
-  };
+//     const newMood = {
+//       id: Date.now(),      // unique id
+//       text: trimmed,
+//       createdAt: Date.now(),
+//     };
 
-  const deleteMood =(id)=>{
-   setMoods((prev) => prev.filter((mood) => mood.id !== id));
-  }
+//     // add to the front immutably
+//     setMoods((prev) => [newMood, ...prev]);
+//   };
 
-  return (
-    <div style={{ padding: "20px", maxWidth: "500px", margin: "0 auto" }}>
-      <h1>Daily Mood Tracker</h1>
-      <MoodInput onAddMood={addMood}  />
-      <MoodList moods={moods} onDelete={deleteMood} />
-      <p>Total moods: {moods.length}</p> {/* Placeholder for later */}
-    </div>
-  );
-}
+//   const deleteMood =(id)=>{
+//    setMoods((prev) => prev.filter((mood) => mood.id !== id));
+//   }
 
-export default App;
+//   return (
+//     <div style={{ padding: "20px", maxWidth: "500px", margin: "0 auto" }}>
+//       <h1>Daily Mood Tracker</h1>
+//       <MoodInput onAddMood={addMood}  />
+//       <MoodList moods={moods} onDelete={deleteMood} />
+//       <p>Total moods: {moods.length}</p> {/* Placeholder for later */}
+//     </div>
+//   );
+// }
+
+// export default App;
+
+

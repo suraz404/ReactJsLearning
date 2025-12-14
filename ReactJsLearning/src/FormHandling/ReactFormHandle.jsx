@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./form.css"
 export const ReactFormHandle =()=>{
 
     const [user,setUser]=useState({
