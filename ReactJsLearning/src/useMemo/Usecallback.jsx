@@ -16,7 +16,7 @@ export default function App() {
     <>
       <h1>Count: {count}</h1>
 
-      <button onClick={() => setCount(count + 1)}>Increase Count</button>
+      <button onClick={() => setCount(count + 2)}>Increase Count</button>
 
       <Button onClick={handleClick} />
     </>
